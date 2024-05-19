@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 50px;
+  display: flex;
+  box-shadow: 0 2px 4px #0000000d;
+}
+
+.header_logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.nav__list {
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links {
+  text-align: center;
+  justify-content: center;
+  margin-right: 20px;
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+.links__link_a {
+  text-transform: uppercase;
+  color: #060b35;
+  padding: 23px 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-decoration: none;
+  transition-duration: .3s;
+  display: inline-block;
+}
+
+.links:last-child {
+  margin-right: 0;
+}
+
+.is-active:after {
+  content: "";
+  background: #00acdc;
+  border-radius: 8px;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.is-active, .links__link_a:hover {
+  color: #00acdc;
+}
+
+.main__container {
+  flex-shrink: 0;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(1, 200px);
+  justify-content: center;
+  gap: 46px 48px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 40px;
+  display: grid;
+}
+
+@media (width >= 488px) {
+  .main__container {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (width >= 768px) {
+  .main__container {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (width >= 1024px) {
+  .main__container {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+.card {
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  flex-direction: column;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  transition: transform .3s;
+  display: flex;
+}
+
+.card__img {
+  width: 160px;
+  height: 134px;
+  margin: 32px 19px 40px;
+  display: block;
+}
+
+.card__title {
+  color: #060b35;
+  margin: 0 16px 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  transition-duration: .3s;
+}
+
+.card__type {
+  color: #616070;
+  margin: 0 84px 16px 16px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card__review-container {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px;
+  display: flex;
+}
+
+.card__review {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.card__price {
+  justify-content: space-between;
+  align-items: center;
+  width: 166px;
+  height: 18px;
+  margin: 24px 16px 0;
+  display: flex;
+}
+
+.card__price-label {
+  color: #616070;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.card__price-value {
+  color: #060b35;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.card__buy-link {
+  text-align: center;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #00acdc;
+  border: 1px solid #00acdc;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 166px;
+  height: 40px;
+  margin: 16px;
+  padding: 12px 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-decoration: none;
+  transition-duration: .3s;
+}
+
+.card__buy-link:hover {
+  color: #00acdc;
+  background-color: #f3f3f3;
+}
+
+.stars {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.stars__star {
+  background-image: url("star.fa806e3c.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.stars__star:not(:last-child) {
+  margin-right: 4px;
+}
+
+.stars--1 .stars__star:first-child, .stars--2 .stars__star:nth-child(-n+2), .stars--3 .stars__star:nth-child(-n+3), .stars--4 .stars__star:nth-child(-n+4), .stars--5 .stars__star:nth-child(-n+5) {
+  background-image: url("star-active.2be54011.svg");
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card__title:hover {
+  color: #34568b;
+}
+/*# sourceMappingURL=index.e378193d.css.map */
